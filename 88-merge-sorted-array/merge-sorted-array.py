@@ -7,13 +7,6 @@ class Solution(object):
         :type n: int
         :rtype: None Do not return anything, modify nums1 in-place instead.
         """
-        # i=m;
-        # for num in nums2:
-        #     nums1[i]=num;
-        #     i+=1;
-        # nums1.sort();
-        # if n==0:
-
         i=m-1;
         j=n-1;
         w=m+n-1;
