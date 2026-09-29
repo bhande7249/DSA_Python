@@ -1,13 +1,13 @@
-class Solution(object):
-    def maxProfit(self, prices):
-        """
-        :type prices: List[int]
-        :rtype: int
-        """
-        profit=0;
-        buy=float('inf');
-        for num in prices:
-            buy=min(buy,num);
-            sell=num-buy;
-            profit=max(sell,profit);
-        return profit;
+class Solution:
+    def maxProfit(self, prices: list[int]) -> int:
+        i=0
+        buy=float('inf')
+        sell=0
+        profit=0
+        while i<len(prices):
+            buy=min(buy,prices[i])
+            sell=prices[i]
+            curProfit=sell-buy
+            profit=max(curProfit,profit)
+            i+=1
+        return profit
